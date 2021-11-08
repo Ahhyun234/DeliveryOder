@@ -7,6 +7,15 @@ import com.nepplus.deliveryoder.Fragments.MyProfileFragment
 import com.nepplus.deliveryoder.Fragments.PizzaStoreListFragment
 
 class ViewPagerAdapter(fm : FragmentManager): FragmentPagerAdapter(fm) {
+
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        return when(position){
+            0-> "피자가게"
+            else -> "내정보"
+        }
+    }
+
     override fun getCount(): Int {
         return 2
     }

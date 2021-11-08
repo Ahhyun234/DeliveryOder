@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         mainViewPager.adapter = mViewPagerAdapter
 
 
+        mainTabLayout.setupWithViewPager(mainViewPager)
 
 
     }
