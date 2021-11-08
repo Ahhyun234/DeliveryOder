@@ -21,7 +21,7 @@ class MyProfile: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.fragment_my_profile,container, false)
+        return inflater.inflate(R.layout.fragment_my_profile, container, false)
 
     }
 
@@ -30,20 +30,20 @@ class MyProfile: Fragment() {
 
         btnChangeNickName.setOnClickListener {
 
-            val myIntent = Intent(requireContext(),EditNickNameActivity::class.java)
-            startActivityForResult(myIntent,REQ_CODE_NICKNAME)
-
-//        onActivityResult()
-
-            if(requestCode==REQ_CODE_NICKNAME){
-                if(resultCode==Activity.RESULT_OK){
-                    val newNickName = data!!.getStringExtra("nick")
-                    txtNickName.text = newNickName
-                }
-            }
-
-
+            val myIntent = Intent(requireContext(), EditNickNameActivity::class.java)
+            startActivityForResult(myIntent, REQ_CODE_NICKNAME)
         }
+    }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQ_CODE_NICKNAME) {
+            if (resultCode == Activity.RESULT_OK) {
+                val newNickName = data!!.getStringExtra("nick")
+                txtNickName.text = newNickName
+            }
+        }
     }
 }
+
+

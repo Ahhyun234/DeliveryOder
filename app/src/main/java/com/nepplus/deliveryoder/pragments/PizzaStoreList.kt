@@ -10,6 +10,7 @@ import com.nepplus.deliveryoder.R
 import com.nepplus.deliveryoder.ViewStoreDetailActivity
 import com.nepplus.deliveryoder.adapters.PizzaStoreAdapter
 import com.nepplus.deliveryoder.datas.StoreData
+import kotlinx.android.synthetic.main.activity_view_store_detail.*
 import kotlinx.android.synthetic.main.fragment_pizza_store_list.*
 
 class PizzaStoreList: Fragment() {
@@ -42,7 +43,10 @@ class PizzaStoreList: Fragment() {
         mainListView.setOnItemClickListener { adapterView, view, position, l ->
             val clickedStore = mPizzaStoreList[position]
             val myIntent = Intent(requireContext(),ViewStoreDetailActivity::class.java)
-         myIntent.putExtra(myIntent)
+            myIntent.putExtra("store",clickedStore)
+            startActivity(myIntent)
+
+
         }
 
     }

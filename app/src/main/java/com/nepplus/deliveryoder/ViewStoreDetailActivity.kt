@@ -11,8 +11,6 @@ import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.normal.TedPermission
 import com.nepplus.deliveryoder.datas.StoreData
 import kotlinx.android.synthetic.main.activity_view_store_detail.*
-import kotlinx.android.synthetic.main.store_list_item.*
-import kotlinx.android.synthetic.main.store_list_item.txtStoreName
 
 class ViewStoreDetailActivity : AppCompatActivity() {
 
