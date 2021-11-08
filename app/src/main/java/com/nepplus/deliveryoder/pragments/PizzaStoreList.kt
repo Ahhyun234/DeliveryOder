@@ -1,5 +1,6 @@
 package com.nepplus.deliveryoder.pragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -36,6 +37,12 @@ class PizzaStoreList: Fragment() {
 
         mPizzaStoreAdapter = PizzaStoreAdapter(requireContext(),R.layout.store_list_item,mPizzaStoreList)
         mainListView.adapter=mPizzaStoreAdapter
+
+        mainListView.setOnItemClickListener { adapterView, view, position, l ->
+            val clickedStore = mPizzaStoreList[position]
+            val myIntent = Intent(requireContext(), )
+          myIntent.putExtra(myIntent)
+        }
 
     }
 }
