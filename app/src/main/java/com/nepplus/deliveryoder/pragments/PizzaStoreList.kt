@@ -42,7 +42,7 @@ class PizzaStoreList: Fragment() {
         mainListView.setOnItemClickListener { adapterView, view, position, l ->
             val clickedStore = mPizzaStoreList[position]
             val myIntent = Intent(requireContext(),ViewStoreDetailActivity::class.java)
-         val myIntent.putExtra(myIntent)
+         myIntent.putExtra(myIntent)
         }
 
     }
