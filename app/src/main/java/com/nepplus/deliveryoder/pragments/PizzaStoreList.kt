@@ -35,7 +35,7 @@ class PizzaStoreList: Fragment() {
         mPizzaStoreList.add(StoreData("도미노피자","15773082","https://pbs.twimg.com/profile_images/1098371010548555776/trCrCTDN_400x400.png"))
 
         mPizzaStoreAdapter = PizzaStoreAdapter(requireContext(),R.layout.store_list_item,mPizzaStoreList)
-        mainListView.adapter=mPizzaStordsf
+        mainListView.adapter=mPizzaStoreAdapter
 
     }
 }
