@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
         mainViewPager.adapter= mvpa
 
 
+        mainTabLayout.setupWithViewPager(mainViewPager)
+
+
+
 
     }
 
