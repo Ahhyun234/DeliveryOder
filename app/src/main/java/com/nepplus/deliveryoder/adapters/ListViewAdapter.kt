@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.nepplus.deliveryoder.Data.PizzaData
@@ -21,16 +22,17 @@ class ListViewAdapter(val mContext: Context, val resId: Int, val mList: ArrayLis
         var tempRow = convertView
         if (tempRow == null) {
             tempRow = mInflater.inflate(R.layout.pizza_list_view_design, null)
+        }
 
             val row = tempRow!!
 
             val data=mList[position]
 
             val storeName = row.findViewById<TextView>(R.id.txtStoreName)
-            val storeLogo = row.findViewById<TextView>(R.id.imgStorePic)
+            val storeLogo = row.findViewById<ImageView>(R.id.imgStorePic)
 
             storeName.text = data.storeName
-            Glide.with(mContext).load(data.storeLogo).into(imgStorePic)
+            Glide.with(mContext).load(data.storeLogo).into(storeLogo)
 
 
             return row
@@ -39,4 +41,4 @@ class ListViewAdapter(val mContext: Context, val resId: Int, val mList: ArrayLis
 
 
 
-}}
+}
