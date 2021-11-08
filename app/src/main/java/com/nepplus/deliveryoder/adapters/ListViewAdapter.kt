@@ -6,9 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.nepplus.deliveryoder.Data.PizzaData
 import com.nepplus.deliveryoder.R
-import kotlinx.android.synthetic.*
+
 
 class ListViewAdapter(val mContext: Context, val resId: Int, val mList: ArrayList<PizzaData>) :
     ArrayAdapter<PizzaData>(mContext, resId, mList) {
@@ -26,10 +27,10 @@ class ListViewAdapter(val mContext: Context, val resId: Int, val mList: ArrayLis
             val data=mList[position]
 
             val storeName = row.findViewById<TextView>(R.id.txtStoreName)
-            val storeLogo = row.findViewById<TextView>(R.id.imgStoreLogo)
+            val storeLogo = row.findViewById<TextView>(R.id.imgStorePic)
 
             storeName.text = data.storeName
-            storeLogo.fic = data.storeLogo
+            Glide.with(mContext).load(data.storeLogo).into(imgStorePic)
 
 
             return row
