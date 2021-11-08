@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.nepplus.deliveryoder.adapters.MainViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
+
 lateinit var mvpa: MainViewPagerAdapter
 
 class MainActivity : AppCompatActivity() {
