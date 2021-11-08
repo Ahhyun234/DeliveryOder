@@ -29,10 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         mainTabLayout.setupWithViewPager(mainViewPager)
 
-        mPizzaList.add(PizzaData("피자헛","15885588","이미지"))
 
-        mPizzaAdapter = ListViewAdapter(this,R.layout.pizza_list_view_design,mPizzaList)
-        mainListView.adapter = mPizzaAdapter
 
     }
 

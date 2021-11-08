@@ -25,11 +25,11 @@ class ListViewAdapter(val mContext: Context, val resId: Int, val mList: ArrayLis
 
             val data=mList[position]
 
-            val storeName = row.findViewById<TextView>(R.id.storeName)
-            val storePhone = row.findViewById<TextView>(R.id.storePhone)
+            val storeName = row.findViewById<TextView>(R.id.txtStoreName)
+            val storeLogo = row.findViewById<TextView>(R.id.imgStoreLogo)
 
             storeName.text = data.storeName
-            storePhone.text = data.storePhone
+            storeLogo.fic = data.storeLogo
 
 
             return row
@@ -38,4 +38,4 @@ class ListViewAdapter(val mContext: Context, val resId: Int, val mList: ArrayLis
 
 
 
-}
+}}
