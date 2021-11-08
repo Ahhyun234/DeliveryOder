@@ -1,5 +1,6 @@
 package com.nepplus.deliveryoder.pragments
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -31,6 +32,16 @@ class MyProfile: Fragment() {
 
             val myIntent = Intent(requireContext(),EditNickNameActivity::class.java)
             startActivityForResult(myIntent,REQ_CODE_NICKNAME)
+
+//        onActivityResult()
+
+            if(requestCode==REQ_CODE_NICKNAME){
+                if(resultCode==Activity.RESULT_OK){
+                    val newNickName = data!!.getStringExtra("nick")
+                    txtNickName.text = newNickName
+                }
+            }
+
 
         }
 
